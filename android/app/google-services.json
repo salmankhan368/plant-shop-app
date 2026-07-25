@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "377549747186",
+    "project_id": "plant-project-803be",
+    "storage_bucket": "plant-project-803be.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377549747186:android:24f68ed16a8ef755a4f16b",
+        "android_client_info": {
+          "package_name": "com.example.demo_proj"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC79ejw35yNEQ3NhTKtrE0sSa5E9Ksvac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
