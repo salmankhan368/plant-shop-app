@@ -1,15 +1,18 @@
-import 'package:demo_proj/features/data/models/product/product_model.dart';
+import 'package:demo_proj/features/auth/screen/home/model/product_model.dart';
 import 'package:flutter/material.dart';
 
 class CartProvider extends ChangeNotifier {
   final List<CartItem> _cartItems = [];
+
   List<CartItem> get cartItems => _cartItems;
-  void addToCart(Product product) {
+
+  void addToCart(ProductModel product) {
     final index = _cartItems.indexWhere(
-      (item) => item.product.name == product.name,
+      (item) => item.product.id == product.id,
     );
+
     if (index != -1) {
-      _cartItems[index].qauntity++;
+      _cartItems[index].quantity++;
     } else {
       _cartItems.add(CartItem(product: product));
     }
@@ -22,17 +25,20 @@ class CartProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void decreaseQuantiy(CartItem item) {
-    if (item.qauntity > 1) {
-      item.qauntity--;
+  void decreaseQuantity(CartItem item) {
+    if (item.quantity > 1) {
+      item.quantity--;
     } else {
       _cartItems.remove(item);
     }
+
     notifyListeners();
   }
 
-  double get totalPrice =>
-      _cartItems.fold(0, (sum, item) => sum + item.totalPrice);
+  double get totalPrice {
+    return _cartItems.fold(0, (sum, item) => sum + item.totalPrice);
+  }
+
   void clearCart() {
     _cartItems.clear();
     notifyListeners();
@@ -42,8 +48,10 @@ class CartProvider extends ChangeNotifier {
 }
 
 class CartItem {
-  final Product product;
-  int qauntity;
-  CartItem({required this.product, this.qauntity = 1});
-  double get totalPrice => product.price * qauntity;
+  final ProductModel product;
+  int quantity;
+
+  CartItem({required this.product, this.quantity = 1});
+
+  double get totalPrice => product.price * quantity;
 }

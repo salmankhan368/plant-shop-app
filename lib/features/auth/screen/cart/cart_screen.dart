@@ -44,14 +44,68 @@ class CartScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: ListTile(
-                          leading: Image.asset(
-                            item.product.imageUrl,
-                            fit: BoxFit.cover,
-                            width: 50,
-                            height: 50,
+                          contentPadding: const EdgeInsets.all(10),
+
+                          leading: ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              item.product.imageUrl,
+                              fit: BoxFit.cover,
+                              width: 60,
+                              height: 60,
+                            ),
                           ),
-                          title: Text(item.product.name),
-                          subtitle: Text(item.product.subtitle.toString()),
+
+                          title: Text(
+                            item.product.name,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(height: 5),
+
+                              Text(
+                                '\$${item.product.price.toStringAsFixed(2)}',
+                              ),
+
+                              const SizedBox(height: 8),
+
+                              Row(
+                                children: [
+                                  IconButton(
+                                    onPressed: () {
+                                      context
+                                          .read<CartProvider>()
+                                          .decreaseQuantity(item);
+                                    },
+                                    icon: const Icon(
+                                      Icons.remove_circle_outline,
+                                    ),
+                                  ),
+
+                                  Text(
+                                    '${item.quantity}',
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+
+                                  IconButton(
+                                    onPressed: () {
+                                      context.read<CartProvider>().addToCart(
+                                        item.product,
+                                      );
+                                    },
+                                    icon: const Icon(Icons.add_circle_outline),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+
                           trailing: IconButton(
                             onPressed: () {
                               context.read<CartProvider>().removeFromCart(item);

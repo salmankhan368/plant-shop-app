@@ -1,20 +1,12 @@
+import 'package:demo_proj/features/auth/screen/home/model/order_model.dart';
+import 'package:demo_proj/features/auth/screen/orders/orders_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class OrderConfirmationScreen extends StatelessWidget {
-  final String name;
-  final String address;
-  final String phone;
-  final String paymentMethod;
-  final double totalPrice;
-  const OrderConfirmationScreen({
-    super.key,
-    required this.name,
-    required this.address,
-    required this.phone,
-    required this.paymentMethod,
-    required this.totalPrice,
-  });
+  final OrderModel order;
+
+  const OrderConfirmationScreen({super.key, required this.order});
 
   @override
   Widget build(BuildContext context) {
@@ -44,24 +36,39 @@ class OrderConfirmationScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Name: $name'),
+                    Text('Name: ${order.name}'),
                     SizedBox(height: 6),
-                    Text('Address: $address'),
+                    Text('Address: ${order.address}'),
                     SizedBox(height: 6),
-                    Text('Phone: $phone'),
+                    Text('Phone: ${order.phone}'),
                     SizedBox(height: 6),
                     Text(
-                      'Payement: ${paymentMethod == 'cod' ? 'Cash on Delivery' : 'card ****1234'}',
+                      'Payement: ${order.paymentMethod == 'cod' ? 'Cash on Delivery' : 'card ****1234'}',
                     ),
                     Divider(height: 24),
                     Text(
-                      'Total Paid: \$${totalPrice.toStringAsFixed(2)}',
+                      'Total Paid: \$${order.totalPrice.toStringAsFixed(2)}',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
                       ),
                     ),
                   ],
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const OrdersScreen(),
+                      ),
+                    );
+                  },
+                  child: const Text('View My Orders'),
                 ),
               ),
               SizedBox(

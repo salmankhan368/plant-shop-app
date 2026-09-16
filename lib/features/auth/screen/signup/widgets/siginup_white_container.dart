@@ -185,6 +185,7 @@ class _SignupWhiteContainerState extends State<SignupWhiteContainer> {
                             return;
                           }
                           await authController.signup(
+                            name: nameController.text.trim(),
                             email: emailController.text.trim(),
                             password: passwordController.text.trim(),
                           );

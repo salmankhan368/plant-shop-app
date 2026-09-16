@@ -1,0 +1,137 @@
+# Details
+
+Date : 2026-08-25 12:48:34
+
+Directory d:\\mini Apps\\demo_proj
+
+Total : 122 files,  5741 codes, 392 comments, 856 blanks, all 6989 lines
+
+[Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
+
+## Files
+| filename | language | code | comment | blank | total |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| [README.md](/README.md) | Markdown | 15 | 0 | 7 | 22 |
+| [analysis\_options.yaml](/analysis_options.yaml) | YAML | 3 | 22 | 4 | 29 |
+| [android/app/google-services.json](/android/app/google-services.json) | JSON | 29 | 0 | 0 | 29 |
+| [android/app/src/debug/AndroidManifest.xml](/android/app/src/debug/AndroidManifest.xml) | XML | 3 | 4 | 1 | 8 |
+| [android/app/src/main/AndroidManifest.xml](/android/app/src/main/AndroidManifest.xml) | XML | 34 | 11 | 1 | 46 |
+| [android/app/src/main/res/drawable-v21/launch\_background.xml](/android/app/src/main/res/drawable-v21/launch_background.xml) | XML | 4 | 7 | 2 | 13 |
+| [android/app/src/main/res/drawable/launch\_background.xml](/android/app/src/main/res/drawable/launch_background.xml) | XML | 4 | 7 | 2 | 13 |
+| [android/app/src/main/res/values-night/styles.xml](/android/app/src/main/res/values-night/styles.xml) | XML | 9 | 9 | 1 | 19 |
+| [android/app/src/main/res/values/styles.xml](/android/app/src/main/res/values/styles.xml) | XML | 9 | 9 | 1 | 19 |
+| [android/app/src/profile/AndroidManifest.xml](/android/app/src/profile/AndroidManifest.xml) | XML | 3 | 4 | 1 | 8 |
+| [android/gradle.properties](/android/gradle.properties) | Properties | 3 | 0 | 1 | 4 |
+| [android/gradle/wrapper/gradle-wrapper.properties](/android/gradle/wrapper/gradle-wrapper.properties) | Properties | 5 | 0 | 1 | 6 |
+| [assets/animations/plant\_loading.json](/assets/animations/plant_loading.json) | JSON | 1 | 0 | 0 | 1 |
+| [devtools\_options.yaml](/devtools_options.yaml) | YAML | 3 | 0 | 1 | 4 |
+| [firebase.json](/firebase.json) | JSON | 1 | 0 | 0 | 1 |
+| [ios/RunnerTests/RunnerTests.swift](/ios/RunnerTests/RunnerTests.swift) | Swift | 7 | 2 | 4 | 13 |
+| [ios/Runner/AppDelegate.swift](/ios/Runner/AppDelegate.swift) | Swift | 12 | 0 | 2 | 14 |
+| [ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json](/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json) | JSON | 122 | 0 | 1 | 123 |
+| [ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json](/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json) | JSON | 23 | 0 | 1 | 24 |
+| [ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md](/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md) | Markdown | 3 | 0 | 2 | 5 |
+| [ios/Runner/Base.lproj/LaunchScreen.storyboard](/ios/Runner/Base.lproj/LaunchScreen.storyboard) | XML | 36 | 1 | 1 | 38 |
+| [ios/Runner/Base.lproj/Main.storyboard](/ios/Runner/Base.lproj/Main.storyboard) | XML | 25 | 1 | 1 | 27 |
+| [ios/Runner/Runner-Bridging-Header.h](/ios/Runner/Runner-Bridging-Header.h) | C++ | 1 | 0 | 1 | 2 |
+| [lib/app.dart](/lib/app.dart) | Dart | 9 | 0 | 3 | 12 |
+| [lib/core/exception/app\_exception.dart](/lib/core/exception/app_exception.dart) | Dart | 6 | 0 | 3 | 9 |
+| [lib/core/exception/firebase\_exception.dart](/lib/core/exception/firebase_exception.dart) | Dart | 25 | 0 | 10 | 35 |
+| [lib/core/exception/network\_exception.dart](/lib/core/exception/network_exception.dart) | Dart | 7 | 0 | 3 | 10 |
+| [lib/core/services/shared\_ref.dart](/lib/core/services/shared_ref.dart) | Dart | 12 | 0 | 5 | 17 |
+| [lib/core/utils/enum/auth\_status.dart](/lib/core/utils/enum/auth_status.dart) | Dart | 1 | 0 | 1 | 2 |
+| [lib/core/utils/flush/app\_flushbar.dart](/lib/core/utils/flush/app_flushbar.dart) | Dart | 27 | 0 | 3 | 30 |
+| [lib/core/utils/utils/images/app\_images.dart](/lib/core/utils/utils/images/app_images.dart) | Dart | 6 | 1 | 1 | 8 |
+| [lib/features/auth/controller/auth\_controller.dart](/lib/features/auth/controller/auth_controller.dart) | Dart | 155 | 11 | 15 | 181 |
+| [lib/features/auth/controller/controller.onboarding/onBoard\_controller.dart](/lib/features/auth/controller/controller.onboarding/onBoard_controller.dart) | Dart | 43 | 3 | 13 | 59 |
+| [lib/features/auth/repository/auth\_repo.dart](/lib/features/auth/repository/auth_repo.dart) | Dart | 40 | 9 | 10 | 59 |
+| [lib/features/auth/repository/share\_pref\_repo.dart](/lib/features/auth/repository/share_pref_repo.dart) | Dart | 11 | 0 | 3 | 14 |
+| [lib/features/auth/screen/cart/cart\_screen.dart](/lib/features/auth/screen/cart/cart_screen.dart) | Dart | 166 | 0 | 13 | 179 |
+| [lib/features/auth/screen/checkout/check\_out\_screen.dart](/lib/features/auth/screen/checkout/check_out_screen.dart) | Dart | 168 | 0 | 17 | 185 |
+| [lib/features/auth/screen/confirmScreen/orderConfirmationScreen.dart](/lib/features/auth/screen/confirmScreen/orderConfirmationScreen.dart) | Dart | 95 | 0 | 5 | 100 |
+| [lib/features/auth/screen/detailScreen/product.detail.Screen.dart](/lib/features/auth/screen/detailScreen/product.detail.Screen.dart) | Dart | 160 | 0 | 4 | 164 |
+| [lib/features/auth/screen/detailScreen/widgets/info\_item.dart](/lib/features/auth/screen/detailScreen/widgets/info_item.dart) | Dart | 42 | 0 | 3 | 45 |
+| [lib/features/auth/screen/forget/forget\_screen.dart](/lib/features/auth/screen/forget/forget_screen.dart) | Dart | 18 | 0 | 4 | 22 |
+| [lib/features/auth/screen/forget/widget/green\_container.dart](/lib/features/auth/screen/forget/widget/green_container.dart) | Dart | 40 | 0 | 5 | 45 |
+| [lib/features/auth/screen/forget/widget/white\_container.dart](/lib/features/auth/screen/forget/widget/white_container.dart) | Dart | 125 | 1 | 17 | 143 |
+| [lib/features/auth/screen/home/controller/category\_controller.dart](/lib/features/auth/screen/home/controller/category_controller.dart) | Dart | 32 | 1 | 9 | 42 |
+| [lib/features/auth/screen/home/controller/home\_controller.dart](/lib/features/auth/screen/home/controller/home_controller.dart) | Dart | 43 | 5 | 9 | 57 |
+| [lib/features/auth/screen/home/controller/order\_controller.dart](/lib/features/auth/screen/home/controller/order_controller.dart) | Dart | 37 | 0 | 9 | 46 |
+| [lib/features/auth/screen/home/home\_page.dart](/lib/features/auth/screen/home/home_page.dart) | Dart | 175 | 1 | 12 | 188 |
+| [lib/features/auth/screen/home/model/categoy\_model.dart](/lib/features/auth/screen/home/model/categoy_model.dart) | Dart | 23 | 0 | 2 | 25 |
+| [lib/features/auth/screen/home/model/order\_model.dart](/lib/features/auth/screen/home/model/order_model.dart) | Dart | 58 | 0 | 3 | 61 |
+| [lib/features/auth/screen/home/model/product\_model.dart](/lib/features/auth/screen/home/model/product_model.dart) | Dart | 89 | 0 | 8 | 97 |
+| [lib/features/auth/screen/home/repository/category\_repository.dart](/lib/features/auth/screen/home/repository/category_repository.dart) | Dart | 7 | 0 | 2 | 9 |
+| [lib/features/auth/screen/home/repository/order\_repository.dart](/lib/features/auth/screen/home/repository/order_repository.dart) | Dart | 12 | 0 | 5 | 17 |
+| [lib/features/auth/screen/home/repository/product\_repository.dart](/lib/features/auth/screen/home/repository/product_repository.dart) | Dart | 9 | 0 | 2 | 11 |
+| [lib/features/auth/screen/home/services/category\_service.dart](/lib/features/auth/screen/home/services/category_service.dart) | Dart | 17 | 0 | 3 | 20 |
+| [lib/features/auth/screen/home/services/firestore\_services.dart](/lib/features/auth/screen/home/services/firestore_services.dart) | Dart | 17 | 0 | 2 | 19 |
+| [lib/features/auth/screen/home/services/order\_service.dart](/lib/features/auth/screen/home/services/order_service.dart) | Dart | 47 | 2 | 5 | 54 |
+| [lib/features/auth/screen/home/widget/category\_card.dart](/lib/features/auth/screen/home/widget/category_card.dart) | Dart | 57 | 0 | 3 | 60 |
+| [lib/features/auth/screen/home/widget/product\_card.dart](/lib/features/auth/screen/home/widget/product_card.dart) | Dart | 89 | 0 | 4 | 93 |
+| [lib/features/auth/screen/home/widget/shimmer\_grid.dart](/lib/features/auth/screen/home/widget/shimmer_grid.dart) | Dart | 21 | 0 | 3 | 24 |
+| [lib/features/auth/screen/home/widget/shimmer\_product\_card.dart](/lib/features/auth/screen/home/widget/shimmer_product_card.dart) | Dart | 57 | 0 | 9 | 66 |
+| [lib/features/auth/screen/login/login\_screen.dart](/lib/features/auth/screen/login/login_screen.dart) | Dart | 18 | 0 | 4 | 22 |
+| [lib/features/auth/screen/login/widget/custom\_field.dart](/lib/features/auth/screen/login/widget/custom_field.dart) | Dart | 54 | 0 | 13 | 67 |
+| [lib/features/auth/screen/login/widget/green\_container.dart](/lib/features/auth/screen/login/widget/green_container.dart) | Dart | 40 | 0 | 3 | 43 |
+| [lib/features/auth/screen/login/widget/white\_container.dart](/lib/features/auth/screen/login/widget/white_container.dart) | Dart | 204 | 7 | 22 | 233 |
+| [lib/features/auth/screen/onboarding/onBoard.dart](/lib/features/auth/screen/onboarding/onBoard.dart) | Dart | 52 | 0 | 6 | 58 |
+| [lib/features/auth/screen/onboarding/widget/next\_button.dart](/lib/features/auth/screen/onboarding/widget/next_button.dart) | Dart | 64 | 0 | 4 | 68 |
+| [lib/features/auth/screen/onboarding/widget/onBoard.page.dart](/lib/features/auth/screen/onboarding/widget/onBoard.page.dart) | Dart | 33 | 0 | 3 | 36 |
+| [lib/features/auth/screen/onboarding/widget/skip\_button.dart](/lib/features/auth/screen/onboarding/widget/skip_button.dart) | Dart | 19 | 0 | 4 | 23 |
+| [lib/features/auth/screen/onboarding/widget/smoth\_page\_ind.dart](/lib/features/auth/screen/onboarding/widget/smoth_page_ind.dart) | Dart | 20 | 0 | 3 | 23 |
+| [lib/features/auth/screen/orders/orders\_screen.dart](/lib/features/auth/screen/orders/orders_screen.dart) | Dart | 142 | 2 | 20 | 164 |
+| [lib/features/auth/screen/otp\_page/otp\_page.dart](/lib/features/auth/screen/otp_page/otp_page.dart) | Dart | 18 | 0 | 3 | 21 |
+| [lib/features/auth/screen/otp\_page/widget/otp\_green\_container.dart](/lib/features/auth/screen/otp_page/widget/otp_green_container.dart) | Dart | 40 | 0 | 3 | 43 |
+| [lib/features/auth/screen/otp\_page/widget/otp\_white\_container.dart](/lib/features/auth/screen/otp_page/widget/otp_white_container.dart) | Dart | 73 | 1 | 14 | 88 |
+| [lib/features/auth/screen/profile/profile\_page.dart](/lib/features/auth/screen/profile/profile_page.dart) | Dart | 75 | 2 | 16 | 93 |
+| [lib/features/auth/screen/profile/widgets/profile\_header.dart](/lib/features/auth/screen/profile/widgets/profile_header.dart) | Dart | 25 | 0 | 7 | 32 |
+| [lib/features/auth/screen/profile/widgets/profile\_tile.dart](/lib/features/auth/screen/profile/widgets/profile_tile.dart) | Dart | 36 | 0 | 8 | 44 |
+| [lib/features/auth/screen/signup/signup\_page.dart](/lib/features/auth/screen/signup/signup_page.dart) | Dart | 19 | 0 | 4 | 23 |
+| [lib/features/auth/screen/signup/widgets/siginup\_white\_container.dart](/lib/features/auth/screen/signup/widgets/siginup_white_container.dart) | Dart | 212 | 4 | 25 | 241 |
+| [lib/features/auth/screen/signup/widgets/signup\_green\_container.dart](/lib/features/auth/screen/signup/widgets/signup_green_container.dart) | Dart | 40 | 0 | 3 | 43 |
+| [lib/features/auth/screen/splash/splash\_screen.dart](/lib/features/auth/screen/splash/splash_screen.dart) | Dart | 62 | 7 | 17 | 86 |
+| [lib/features/auth/screen/splash/widgets/splash\_body.dart](/lib/features/auth/screen/splash/widgets/splash_body.dart) | Dart | 37 | 0 | 8 | 45 |
+| [lib/features/auth/screen/verification/verify\_email.dart](/lib/features/auth/screen/verification/verify_email.dart) | Dart | 19 | 0 | 4 | 23 |
+| [lib/features/auth/screen/verification/widgets/verify\_green\_container.dart](/lib/features/auth/screen/verification/widgets/verify_green_container.dart) | Dart | 41 | 0 | 6 | 47 |
+| [lib/features/auth/screen/verification/widgets/verify\_white\_container.dart](/lib/features/auth/screen/verification/widgets/verify_white_container.dart) | Dart | 150 | 7 | 14 | 171 |
+| [lib/features/auth/services/auth\_services.dart](/lib/features/auth/services/auth_services.dart) | Dart | 101 | 9 | 12 | 122 |
+| [lib/features/data/models/cart/cart\_model.dart](/lib/features/data/models/cart/cart_model.dart) | Dart | 43 | 0 | 15 | 58 |
+| [lib/features/data/models/product/product\_model.dart](/lib/features/data/models/product/product_model.dart) | Dart | 90 | 0 | 9 | 99 |
+| [lib/firebase\_options.dart](/lib/firebase_options.dart) | Dart | 53 | 12 | 3 | 68 |
+| [lib/main.dart](/lib/main.dart) | Dart | 74 | 8 | 14 | 96 |
+| [linux/CMakeLists.txt](/linux/CMakeLists.txt) | CMake | 104 | 0 | 25 | 129 |
+| [linux/flutter/CMakeLists.txt](/linux/flutter/CMakeLists.txt) | CMake | 79 | 0 | 10 | 89 |
+| [linux/flutter/generated\_plugin\_registrant.cc](/linux/flutter/generated_plugin_registrant.cc) | C++ | 7 | 4 | 5 | 16 |
+| [linux/flutter/generated\_plugin\_registrant.h](/linux/flutter/generated_plugin_registrant.h) | C++ | 5 | 5 | 6 | 16 |
+| [linux/flutter/generated\_plugins.cmake](/linux/flutter/generated_plugins.cmake) | CMake | 19 | 0 | 6 | 25 |
+| [linux/runner/CMakeLists.txt](/linux/runner/CMakeLists.txt) | CMake | 21 | 0 | 6 | 27 |
+| [linux/runner/main.cc](/linux/runner/main.cc) | C++ | 5 | 0 | 2 | 7 |
+| [linux/runner/my\_application.cc](/linux/runner/my_application.cc) | C++ | 91 | 25 | 29 | 145 |
+| [linux/runner/my\_application.h](/linux/runner/my_application.h) | C++ | 7 | 7 | 5 | 19 |
+| [macos/Flutter/GeneratedPluginRegistrant.swift](/macos/Flutter/GeneratedPluginRegistrant.swift) | Swift | 14 | 3 | 4 | 21 |
+| [macos/RunnerTests/RunnerTests.swift](/macos/RunnerTests/RunnerTests.swift) | Swift | 7 | 2 | 4 | 13 |
+| [macos/Runner/AppDelegate.swift](/macos/Runner/AppDelegate.swift) | Swift | 11 | 0 | 3 | 14 |
+| [macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json](/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json) | JSON | 68 | 0 | 1 | 69 |
+| [macos/Runner/Base.lproj/MainMenu.xib](/macos/Runner/Base.lproj/MainMenu.xib) | XML | 343 | 0 | 1 | 344 |
+| [macos/Runner/MainFlutterWindow.swift](/macos/Runner/MainFlutterWindow.swift) | Swift | 12 | 0 | 4 | 16 |
+| [pubspec.yaml](/pubspec.yaml) | YAML | 34 | 57 | 14 | 105 |
+| [test/widget\_test.dart](/test/widget_test.dart) | Dart | 14 | 10 | 6 | 30 |
+| [web/index.html](/web/index.html) | HTML | 19 | 15 | 5 | 39 |
+| [web/manifest.json](/web/manifest.json) | JSON | 35 | 0 | 1 | 36 |
+| [windows/CMakeLists.txt](/windows/CMakeLists.txt) | CMake | 89 | 0 | 20 | 109 |
+| [windows/flutter/CMakeLists.txt](/windows/flutter/CMakeLists.txt) | CMake | 98 | 0 | 12 | 110 |
+| [windows/flutter/generated\_plugin\_registrant.cc](/windows/flutter/generated_plugin_registrant.cc) | C++ | 15 | 4 | 5 | 24 |
+| [windows/flutter/generated\_plugin\_registrant.h](/windows/flutter/generated_plugin_registrant.h) | C++ | 5 | 5 | 6 | 16 |
+| [windows/flutter/generated\_plugins.cmake](/windows/flutter/generated_plugins.cmake) | CMake | 22 | 0 | 6 | 28 |
+| [windows/runner/CMakeLists.txt](/windows/runner/CMakeLists.txt) | CMake | 34 | 0 | 7 | 41 |
+| [windows/runner/flutter\_window.cpp](/windows/runner/flutter_window.cpp) | C++ | 49 | 7 | 16 | 72 |
+| [windows/runner/flutter\_window.h](/windows/runner/flutter_window.h) | C++ | 20 | 5 | 9 | 34 |
+| [windows/runner/main.cpp](/windows/runner/main.cpp) | C++ | 30 | 4 | 10 | 44 |
+| [windows/runner/resource.h](/windows/runner/resource.h) | C++ | 9 | 6 | 2 | 17 |
+| [windows/runner/utils.cpp](/windows/runner/utils.cpp) | C++ | 54 | 2 | 10 | 66 |
+| [windows/runner/utils.h](/windows/runner/utils.h) | C++ | 8 | 6 | 6 | 20 |
+| [windows/runner/win32\_window.cpp](/windows/runner/win32_window.cpp) | C++ | 210 | 24 | 55 | 289 |
+| [windows/runner/win32\_window.h](/windows/runner/win32_window.h) | C++ | 48 | 31 | 24 | 103 |
+
+[Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)

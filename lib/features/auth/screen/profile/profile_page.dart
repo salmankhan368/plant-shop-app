@@ -1,6 +1,8 @@
 import 'package:demo_proj/core/utils/flush/app_flushbar.dart';
 import 'package:demo_proj/features/auth/controller/auth_controller.dart';
 import 'package:demo_proj/features/auth/screen/login/login_screen.dart';
+import 'package:demo_proj/features/auth/screen/orders/orders_screen.dart';
+import 'package:demo_proj/features/auth/screen/profile/edit_profile_page.dart';
 import 'package:demo_proj/features/auth/screen/profile/widgets/profile_header.dart';
 import 'package:demo_proj/features/auth/screen/profile/widgets/profile_tile.dart';
 import 'package:flutter/material.dart';
@@ -28,12 +30,26 @@ class ProfilePage extends StatelessWidget {
             ProfileTile(
               icon: Iconsax.user_edit,
               title: "Edit Profile",
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => EditProfilePage()),
+                );
+              },
             ),
 
             ProfileTile(icon: Iconsax.heart, title: "Favorites", onTap: () {}),
 
-            ProfileTile(icon: Iconsax.box, title: "My Orders", onTap: () {}),
+            ProfileTile(
+              icon: Iconsax.box,
+              title: "My Orders",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => OrdersScreen()),
+                );
+              },
+            ),
 
             ProfileTile(
               icon: Iconsax.location,

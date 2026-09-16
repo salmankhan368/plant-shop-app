@@ -1,6 +1,7 @@
 import 'package:demo_proj/core/utils/enum/auth_status.dart';
 import 'package:demo_proj/features/auth/services/auth_services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AuthRepository {
   final AuthServices _authServices;
@@ -20,10 +21,15 @@ class AuthRepository {
 
   //signup
   Future<UserCredential> signup({
+    required String name,
     required String email,
     required String password,
   }) async {
-    return await _authServices.signUp(email: email, password: password);
+    return await _authServices.signUp(
+      name: name,
+      email: email,
+      password: password,
+    );
   }
 
   //send email verification
@@ -54,5 +60,26 @@ class AuthRepository {
   //check user session
   Future<AuthStatus> checkUserSession() async {
     return _authServices.checkUserSession();
+  }
+
+  //update profile
+  Future<void> updateProfile({required String name, String? imageUrl}) async {
+    await _authServices.updateProfile(name: name, imageUrl: imageUrl);
+  }
+
+  //upload profile
+  Future<String> uploadProfileImage({required XFile image}) async {
+    return await _authServices.uploadProfileImage(image: image);
+  }
+
+  //change password
+  Future<void> changePassword({
+    required currentPassword,
+    required newPassword,
+  }) async {
+    await _authServices.changePassword(
+      currentPassword: currentPassword,
+      newPassword: newPassword,
+    );
   }
 }

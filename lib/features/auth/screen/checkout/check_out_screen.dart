@@ -1,5 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_proj/features/auth/screen/confirmScreen/orderConfirmationScreen.dart';
+import 'package:demo_proj/features/auth/screen/home/controller/order_controller.dart';
+import 'package:demo_proj/features/auth/screen/home/model/order_model.dart';
 import 'package:demo_proj/features/data/models/cart/cart_model.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -28,6 +32,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final orderController = context.read<OrderController>();
+
     return Scaffold(
       appBar: AppBar(title: const Text('Checkout')),
       body: Padding(
@@ -115,23 +121,45 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   width: double.infinity,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {
+                    onPressed: () async {
                       if (_formKey.currentState!.validate()) {
                         final cartProvider = context.read<CartProvider>();
                         final total = cartProvider.totalPrice;
+                        final cartItem = cartProvider.cartItems;
+                        final orderItems = cartItem.map((item) {
+                          return OrderItem(
+                            productId: item.product.id,
+                            productName: item.product.name,
+                            quantity: item.quantity,
+                            price: item.product.price,
+                          );
+                        }).toList();
+                        final userId = FirebaseAuth.instance.currentUser!.uid;
+                        final order = OrderModel(
+                          id: FirebaseFirestore.instance
+                              .collection('orders')
+                              .doc()
+                              .id,
+                          name: _nameController.text,
+                          phone: _phoneController.text,
+                          address: _addressController.text,
+                          paymentMethod: _selectedPayment,
+                          status: 'pending',
+                          totalPrice: cartProvider.totalPrice,
+                          createdAt: DateTime.now(),
+                          items: orderItems,
+                          userId: userId,
+                        );
+                        await orderController.createOrder(order);
+
+                        cartProvider.clearCart();
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => OrderConfirmationScreen(
-                              name: _nameController.text,
-                              address: _addressController.text,
-                              phone: _phoneController.text,
-                              paymentMethod: _selectedPayment,
-                              totalPrice: total,
-                            ),
+                            builder: (context) =>
+                                OrderConfirmationScreen(order: order),
                           ),
                         );
-                        // Order placement logic yahan aayega (next step)
                       }
                     },
                     style: ElevatedButton.styleFrom(

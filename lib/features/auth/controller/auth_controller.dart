@@ -5,10 +5,12 @@ import 'package:demo_proj/core/utils/enum/auth_status.dart';
 import 'package:demo_proj/features/auth/repository/auth_repo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AuthController extends ChangeNotifier {
   final AuthRepository authRepository;
   AuthController(this.authRepository);
+  User? get currentUser => FirebaseAuth.instance.currentUser;
   bool _isLoading = false;
   bool get isLoading => _isLoading;
   String? _errorMessage;
@@ -76,13 +78,17 @@ class AuthController extends ChangeNotifier {
   }
 
   //signUp
-  Future<void> signup({required String email, required String password}) async {
+  Future<void> signup({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
     _isLoading = true;
     _errorMessage = null;
     notifyListeners();
 
     try {
-      await authRepository.signup(email: email, password: password);
+      await authRepository.signup(name: name, email: email, password: password);
     } on AppException catch (e) {
       _errorMessage = e.message;
     } catch (e) {
@@ -175,6 +181,53 @@ class AuthController extends ChangeNotifier {
     } catch (e) {
       _errorMessage = "Something went wrong.";
       return AuthStatus.loggedOut;
+    }
+  }
+
+  //update profile
+  Future<void> updateProfile({required String name, XFile? image}) async {
+    _isLoading = true;
+    _errorMessage = null;
+    notifyListeners();
+
+    try {
+      String? imageUrl;
+
+      if (image != null) {
+        imageUrl = await authRepository.uploadProfileImage(image: image);
+      }
+
+      await authRepository.updateProfile(name: name, imageUrl: imageUrl);
+    } on AppException catch (e) {
+      _errorMessage = e.message;
+    } catch (e) {
+      _errorMessage = 'Something went wrong';
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  //change password
+  Future<void> changePassword({
+    required String currentPassword,
+    required String newPassword,
+  }) async {
+    _isLoading == true;
+    _errorMessage = null;
+    notifyListeners();
+    try {
+      await authRepository.changePassword(
+        currentPassword: currentPassword,
+        newPassword: newPassword,
+      );
+    } on AppException catch (e) {
+      _errorMessage = e.message;
+    } catch (e) {
+      _errorMessage = 'Something went wrong. Please try again.';
+    } finally {
+      _isLoading = false;
+      notifyListeners();
     }
   }
 }

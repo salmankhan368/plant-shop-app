@@ -1,5 +1,6 @@
+import 'package:demo_proj/features/auth/screen/home/model/product_model.dart';
 import 'package:demo_proj/features/data/models/cart/cart_model.dart';
-import 'package:demo_proj/features/data/models/product/product_model.dart';
+
 import 'package:demo_proj/features/auth/screen/cart/cart_screen.dart';
 import 'package:demo_proj/features/auth/screen/detailScreen/widgets/info_item.dart';
 import 'package:demo_proj/core/utils/flush/app_flushbar.dart';
@@ -8,7 +9,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
 
 class ProductDetailScreen extends StatelessWidget {
-  final Product product;
+  final ProductModel product;
   const ProductDetailScreen({super.key, required this.product});
 
   @override
@@ -56,7 +57,7 @@ class ProductDetailScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 25),
                 Text(
-                  product.subtitle.toString(),
+                  product.shortDescription.toString(),
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.normal,
